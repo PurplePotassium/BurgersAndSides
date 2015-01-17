@@ -2,10 +2,9 @@
 using System.Collections;
 
 public class FlipScript : MonoBehaviour {
-	public enum CookState {Raw, twenty,eighty,Done,Burned};
 	enum CurrentSide {One,Two};
 	public float state_timer = 1.7f, color_change = 2.0f;
-	float current_timer = 0f, max_cook = 2f;
+	float current_timer = 0f, max_cook = 1.7f;
 	CurrentSide state;
 	Color[] Colors;
 	Vector2 CookLevel;
@@ -42,7 +41,7 @@ public class FlipScript : MonoBehaviour {
 	}
 
 	void ChangeColor (){
-		GetComponent<SpriteRenderer> ().color = Color.Lerp(new Color (228.0f / 255.0f, 114.0f / 255.0f, 128.0f / 255.0f, 1.0f),
+		GetComponent<SpriteRenderer> ().color = Color.Lerp(new Color (238.0f / 255.0f, 114.0f / 255.0f, 128.0f / 255.0f, 1.0f),
 		                                                   new Color (153.0f / 255.0f, 73.0f / 255.0f, 0.0f, 1.0f),cook_level);
 
 	}
@@ -51,7 +50,7 @@ public class FlipScript : MonoBehaviour {
 		isBurned = true;
 		GetComponent<SpriteRenderer> ().color = Color.black;
 		Debug.Log ("You burned the burger");
-		//
+		Destroy (this.gameObject, 2f);
 	}
 
 	void DeliverBurguer(){
@@ -74,14 +73,12 @@ public class FlipScript : MonoBehaviour {
 
 	}
 
-	void Update(){
+	void OnMouseOver(){
 		if (Input.GetMouseButtonDown (1))
-						DeliverBurguer ();
-
-
+				DeliverBurguer ();
 	}
 
-	void OnMouseDown(){
+	void OnMouseDown(){		
 		if(!isBurned)
 			Flip ();
 	}
