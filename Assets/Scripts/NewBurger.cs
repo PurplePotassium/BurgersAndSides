@@ -4,26 +4,23 @@ using System.Collections;
 public class NewBurger : MonoBehaviour {
 	enum CurrentSide {One,Two};
 	public GameObject other;
-	public float state_timer = 1.7f, color_change = 1.3f;
+	public float color_change = 1.3f;
 	float current_timer = 0f, max_cook = 1.7f;
 	SpriteRenderer[] SpriteColor;
 	CurrentSide state;
-	Color[] Colors;
 	Vector2 CookLevel;
 	float cook_level = 0f;
 	bool isBurned = false;
 	
 	void Start () {
-		Colors = new Color[2];
 		state = CurrentSide.One;
 		SpriteColor = new SpriteRenderer[2];
 		CookLevel.y = 0f;
 		CookLevel.x = 0f;
-		SpriteColor [0] = GetComponent<SpriteRenderer> ();
-		SpriteColor [1] = other.GetComponent<SpriteRenderer> ();
 		GetComponent<SpriteRenderer> ().color = Color.red;
 		other.GetComponent<SpriteRenderer> ().color = Color.red;
-		Colors [1] = Color.red;
+		SpriteColor [0] = GetComponent<SpriteRenderer> ();
+		SpriteColor [1] = other.GetComponent<SpriteRenderer> ();
 		current_timer = color_change;
 	}
 	
@@ -51,7 +48,7 @@ public class NewBurger : MonoBehaviour {
 	
 	void ChangeColor (){
 		other.GetComponent<SpriteRenderer> ().color = Color.Lerp(new Color (238.0f / 255.0f, 114.0f / 255.0f, 128.0f / 255.0f, 1.0f),
-		                                                   new Color (153.0f / 255.0f, 73.0f / 255.0f, 0.0f, 1.0f),cook_level);
+		                                              new Color (153.0f / 255.0f, 73.0f / 255.0f, 0.0f, 1.0f),cook_level);
 		
 	}
 	
@@ -75,15 +72,15 @@ public class NewBurger : MonoBehaviour {
 		current_timer -= Time.deltaTime;
 		if (current_timer <= 0) {
 			ChangeColor ();
-			cook_level += 0.15f;
-			if ( cook_level >= max_cook) Burned();							
+			cook_level += 0.15f;							
 			current_timer = color_change;
+			if ( cook_level >= max_cook) Burned();
 		}
 		
 	}
 	
 	void OnMouseOver(){
-		if (Input.GetMouseButtonDown (1))
+		if (Input.GetMouseButtonDown (1) && !isBurned)
 			DeliverBurguer ();
 	}
 	
