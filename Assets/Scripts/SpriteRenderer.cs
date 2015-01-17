@@ -5,7 +5,7 @@ public class SpriteRenderer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		renderer.material.color = new Color (228.0f, 114.0f, 128.0f, 0.0f);
+		renderer.material.color = new Color (228.0f/255.0f, 114.0f/255.0f, 128.0f/255.0f, 0.0f);
 	}
 	
 	// Update is called once per frame
