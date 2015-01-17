@@ -4,7 +4,7 @@ using System.Collections;
 public class NewBurger : MonoBehaviour {
 	enum CurrentSide {One,Two};
 	public GameObject other;
-	public float color_change = 1.3f;
+	public float color_change = 1.5f;
 	float current_timer = 0f, max_cook = 1.7f;
 	SpriteRenderer[] SpriteColor;
 	CurrentSide state;
@@ -27,22 +27,15 @@ public class NewBurger : MonoBehaviour {
 	void Flip(){
 		if (state == CurrentSide.One) {
 			state = CurrentSide.Two;
-			SpriteColor [0].color = other.GetComponent<SpriteRenderer> ().color;
-			SpriteColor [1].color = GetComponent<SpriteRenderer> ().color;
 			CookLevel.x = cook_level;
 			cook_level = CookLevel.y;
-			other.GetComponent<SpriteRenderer> ().color = SpriteColor [0].color;
-			GetComponent<SpriteRenderer> ().color = SpriteColor [1].color;
 		} else {
 			state = CurrentSide.One;
-			SpriteColor [1].color = other.GetComponent<SpriteRenderer> ().color;
-			SpriteColor [0].color = GetComponent<SpriteRenderer> ().color;
 			CookLevel.y = cook_level;
 			cook_level = CookLevel.x;
-			other.GetComponent<SpriteRenderer> ().color = SpriteColor [1].color;
-			GetComponent<SpriteRenderer> ().color = SpriteColor [0].color;
 		}
-		
+		GetComponent<SpriteRenderer> ().color = other.GetComponent<SpriteRenderer> ().color;
+		other.GetComponent<SpriteRenderer> ().color = GetComponent<SpriteRenderer> ().color;
 		
 	}
 	
