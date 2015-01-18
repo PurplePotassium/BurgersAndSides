@@ -1,15 +1,18 @@
 fileFormatVersion: 2
-guid: 55f6f9d871b08d44a8f5ce17218f619b
+<<<<<<< HEAD
+guid: 2002eb3b217607141964d3f7716a665b
+TextureImporter:
+  fileIDToRecycleName: {}
+=======
+guid: daed2fab9dc8e9d4c83aeb786c2ba155
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Patties_0
-    21300002: Patties_1
-    21300004: Patties_2
-    21300006: Patties_3
-    21300008: Patties_4
-    21300010: Patties_5
-    21300012: Patties_6
-    21300014: Patties_7
+    21300000: CHOOSE A SIDE_0
+    21300002: CHOOSE A SIDE_1
+    21300004: CHOOSE A SIDE_2
+    21300006: CHOOSE A SIDE_3
+    21300008: CHOOSE A SIDE_4
+>>>>>>> buttons
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -39,7 +42,11 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
+<<<<<<< HEAD
+  spriteMode: 1
+=======
   spriteMode: 2
+>>>>>>> buttons
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -50,86 +57,60 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
+<<<<<<< HEAD
+    sprites: []
+=======
     sprites:
-    - name: Patties_0
+    - name: CHOOSE A SIDE_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1024
-        width: 1024
-        height: 1024
+        y: 728
+        width: 963
+        height: 182
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Patties_1
+    - name: CHOOSE A SIDE_1
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 1024
-        width: 1024
-        height: 1024
+        x: 0
+        y: 546
+        width: 963
+        height: 182
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Patties_2
+    - name: CHOOSE A SIDE_2
       rect:
         serializedVersion: 2
-        x: 2048
-        y: 1024
-        width: 1024
-        height: 1024
+        x: 0
+        y: 364
+        width: 963
+        height: 182
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Patties_3
+    - name: CHOOSE A SIDE_3
       rect:
         serializedVersion: 2
-        x: 3072
-        y: 1024
-        width: 1024
-        height: 1024
+        x: 0
+        y: 182
+        width: 963
+        height: 182
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Patties_4
+    - name: CHOOSE A SIDE_4
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1024
-        height: 1024
+        width: 963
+        height: 182
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Patties_5
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 0
-        width: 1024
-        height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Patties_6
-      rect:
-        serializedVersion: 2
-        x: 2048
-        y: 0
-        width: 1024
-        height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Patties_7
-      rect:
-        serializedVersion: 2
-        x: 3072
-        y: 0
-        width: 1024
-        height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> buttons
   spritePackingTag: 
   userData: 

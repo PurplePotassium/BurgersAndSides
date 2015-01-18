@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-<<<<<<< Temporary merge branch 1
-guid: 41a91a7cdfd4ec8488381e9d81ab018c
+<<<<<<< HEAD
+guid: bd988d5ed38e12940b6d79e95fe6c7ed
 =======
-guid: 6a3a2fa371c601f42a5af2f80f009bc9
->>>>>>> Temporary merge branch 2
+guid: 370578aa643001c428d331d811c6be71
+>>>>>>> vwing
 TextureImporter:
   fileIDToRecycleName: {}
   serializedVersion: 2
@@ -29,7 +29,11 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
+<<<<<<< HEAD
+    aniso: -1
+=======
     aniso: 16
+>>>>>>> vwing
     mipBias: -1
     wrapMode: -1
   nPOTScale: 0
