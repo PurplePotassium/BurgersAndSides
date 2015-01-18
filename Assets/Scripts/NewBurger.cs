@@ -18,7 +18,7 @@ public class NewBurger : MonoBehaviour {
 	public bool isBurger = false;
 
 	void Start () {
-		Manager = GameObject.Find ("Manager");
+		Manager = GameObject.Find ("GUI");
 		state = CurrentSide.One;
 		SpriteColor = new SpriteRenderer[2];
 		CookLevel.y = 0f;
