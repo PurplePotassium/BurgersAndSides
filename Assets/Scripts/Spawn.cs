@@ -6,6 +6,7 @@ public class Spawn : MonoBehaviour {
     List<Vector3> spawnPoints = new List<Vector3>();
     bool[] spawned = new bool[7];
     HashSet<int> indexTaken = new HashSet<int>();
+    HashSet<int> full = new HashSet<int>();
     public GameObject burger;
 
     void Awake()
@@ -14,6 +15,9 @@ public class Spawn : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        for (int i = 0; i < 7; i++)
+            full.Add(i);
+
         spawnPoints.Add(new Vector3(-6.37f, 0.91f, -0.44f));
         spawnPoints.Add(new Vector3(-2.8f, -0.21f, -0.44f));
         spawnPoints.Add(new Vector3(-6.93f, -1.89f, -0.44f));
@@ -47,6 +51,8 @@ public class Spawn : MonoBehaviour {
         int ran = Random.Range(0, 7);
         if (!indexTaken.Contains(ran))
             Instantiate(burger, spawnPoints[ran], burger.transform.rotation);
+        else if(indexTaken.IsProperSubsetOf(full))
+            SpawnOne();
         indexTaken.Add(ran);
     }
 }

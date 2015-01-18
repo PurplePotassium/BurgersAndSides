@@ -30,7 +30,7 @@ public class Conveyor : MonoBehaviour
     void Update()
     {
         for (int i = 0; i < burgerArray.Count; ++i)
-            if(burgerArray[i]!=null)
+            if (burgerArray[i] != null)
             {
                 burgerArray[i].transform.position = Vector3.Lerp(burgerArray[i].transform.position, conveyorEndPoint,
                     conveyorSpeed * Time.deltaTime);
@@ -39,8 +39,20 @@ public class Conveyor : MonoBehaviour
             {
                 GetComponent<Spawn>().SpawnOne();
             }
+        burgerArray = TruncateList(burgerArray);
 	
 	}
+
+    List<GameObject> TruncateList(List<GameObject> list1)
+    {
+        List<GameObject> list2 = new List<GameObject>();
+        for (int i = 0; i < list1.Count; ++i)
+        {
+            if (list1[i] != null)
+                list2.Add(burgerArray[i]);
+        }
+        return list2;
+    }
 
     IEnumerator ConveyorBelt()
     {
