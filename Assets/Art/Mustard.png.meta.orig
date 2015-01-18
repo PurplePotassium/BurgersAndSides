@@ -2,8 +2,12 @@ fileFormatVersion: 2
 <<<<<<< HEAD
 guid: 062fc214740e4584d8169337c1fc30b4
 =======
+<<<<<<< HEAD
 guid: fe0f7d6d5fc6e30478b838d4c78c3b89
->>>>>>> vwing
+=======
+guid: 062fc214740e4584d8169337c1fc30b4
+>>>>>>> 978018390d01160dc800f01c59fe3af42cb45031
+>>>>>>> gfazenda
 TextureImporter:
   fileIDToRecycleName: {}
   serializedVersion: 2
@@ -29,7 +33,7 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: -1
   nPOTScale: 0
