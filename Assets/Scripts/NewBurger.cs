@@ -11,8 +11,11 @@ public class NewBurger : MonoBehaviour {
 	Vector2 CookLevel;
 	float cook_level = 0f;
 	bool isBurned = false;
-	
+	GameObject Manager;
+	public int BurgerPenalty = 7;
+
 	void Start () {
+		Manager = GameObject.Find ("Manager");
 		state = CurrentSide.One;
 		SpriteColor = new SpriteRenderer[2];
 		CookLevel.y = 0f;
@@ -23,8 +26,16 @@ public class NewBurger : MonoBehaviour {
 		SpriteColor [1] = other.GetComponent<SpriteRenderer> ();
 		current_timer = color_change;
 	}
-	
+
+
 	void Flip(){
+		//Debug.Log(this.animation)
+		//Invoke ("TurnAnimOFF", 5f);
+		//GetComponent<Animator>().enabled = true;
+
+		//GetComponent<Animator> ().SetBool ("Flip", true);
+		//this.animation.Play();
+
 		if (state == CurrentSide.One) {
 			state = CurrentSide.Two;
 			CookLevel.x = cook_level;
@@ -36,7 +47,7 @@ public class NewBurger : MonoBehaviour {
 		}
 		GetComponent<SpriteRenderer> ().color = other.GetComponent<SpriteRenderer> ().color;
 		other.GetComponent<SpriteRenderer> ().color = GetComponent<SpriteRenderer> ().color;
-		
+
 	}
 	
 	void ChangeColor (){
@@ -46,6 +57,7 @@ public class NewBurger : MonoBehaviour {
 	}
 	
 	void Burned(){
+		Manager.GetComponent<BurgerBar> ().curHealth -= BurgerPenalty;
 		isBurned = true;
 		other.GetComponent<SpriteRenderer> ().color = Color.black;
 		Debug.Log ("You burned the burger");
@@ -61,9 +73,11 @@ public class NewBurger : MonoBehaviour {
 		if (!isBurned && CookLevel.x >= 1f && CookLevel.y >= 1f)
 			Debug.Log ("Perfect!");
 	}
+
 	void FixedUpdate(){
 		current_timer -= Time.deltaTime;
-		if (current_timer <= 0) {
+		if (current_timer <= 0 && !isBurned) {
+
 			ChangeColor ();
 			cook_level += 0.15f;							
 			current_timer = color_change;
