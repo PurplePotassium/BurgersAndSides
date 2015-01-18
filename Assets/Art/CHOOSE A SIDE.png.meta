@@ -1,12 +1,7 @@
 fileFormatVersion: 2
-guid: daed2fab9dc8e9d4c83aeb786c2ba155
+guid: 2002eb3b217607141964d3f7716a665b
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: CHOOSE A SIDE_0
-    21300002: CHOOSE A SIDE_1
-    21300004: CHOOSE A SIDE_2
-    21300006: CHOOSE A SIDE_3
-    21300008: CHOOSE A SIDE_4
+  fileIDToRecycleName: {}
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,9 +25,9 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: 16
+    aniso: -1
     mipBias: -1
-    wrapMode: 1
+    wrapMode: -1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
