@@ -42,6 +42,8 @@ public class SideScript : MonoBehaviour {
 
 				int posx = 50, posy = 125, newline = 140, b_width = 130, b_height = 60;
 				if (!sideChosen) {
+						GUI.Label (new Rect ((posx+b_width/4), posy-20, b_width, b_height), 
+			            game_script.getSideName(lastNumbers [0]));
 						if (GUI.Button (new Rect (posx, posy, b_width, b_height), SideButtons [0])) {
 								sideChosen = true;
 								game_script.SetNextSide (lastNumbers [0]);
@@ -49,12 +51,16 @@ public class SideScript : MonoBehaviour {
 			
 
 						posx += newline;
+						GUI.Label (new Rect ((posx+b_width/4), posy-20, b_width, b_height), 
+			            game_script.getSideName(lastNumbers [1]));
 						if (GUI.Button (new Rect (posx, posy, b_width, b_height), SideButtons [1])) {
 								sideChosen = true;
 								game_script.SetNextSide (lastNumbers [1]);
 						}
 
 						posx += newline;
+						GUI.Label (new Rect ((posx+b_width/4), posy-20, b_width, b_height), 
+			            game_script.getSideName(lastNumbers [2]));
 						if (GUI.Button (new Rect (posx, posy, b_width, b_height), SideButtons [2])) {
 								sideChosen = true;
 								game_script.SetNextSide (lastNumbers [2]);

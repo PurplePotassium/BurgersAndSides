@@ -13,6 +13,8 @@ public class NewBurger : MonoBehaviour {
 	bool isBurned = false;
 	GameObject Manager;
 	public int BurgerPenalty = 7;
+	public Vector3 FirstColor;
+	public Vector3 SecondColor;
 
 	void Start () {
 		Manager = GameObject.Find ("Manager");
@@ -51,8 +53,10 @@ public class NewBurger : MonoBehaviour {
 	}
 	
 	void ChangeColor (){
-		other.GetComponent<SpriteRenderer> ().color = Color.Lerp(new Color (238.0f / 255.0f, 114.0f / 255.0f, 128.0f / 255.0f, 1.0f),
-		                                              new Color (153.0f / 255.0f, 73.0f / 255.0f, 0.0f, 1.0f),cook_level);
+		other.GetComponent<SpriteRenderer> ().color = Color.Lerp(new Color (FirstColor.x, FirstColor.y, FirstColor.z, 1.0f),
+		                                                         new Color (SecondColor.x, SecondColor.y, SecondColor.z, 1.0f),cook_level);
+		//other.GetComponent<SpriteRenderer> ().color = 	Color.Lerp(new Color (238.0f / 255.0f, 114.0f / 255.0f, 128.0f / 255.0f, 1.0f),
+		//           new Color (153.0f / 255.0f, 73.0f / 255.0f, 0.0f, 1.0f),cook_level);
 		
 	}
 	

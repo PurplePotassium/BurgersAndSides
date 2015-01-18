@@ -22,6 +22,10 @@ public class MainScript : MonoBehaviour {
 	public int getLevel(){
 				return nextLevel;
 		}
+
+	public string getSideName(int index){
+		return SideNames[index];
+	}
 	// Update is called once per frame
 	void Update () {
 	
