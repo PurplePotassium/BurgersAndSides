@@ -2,14 +2,14 @@
 using System.Collections;
 
 public class MainScript : MonoBehaviour {
-	string[] SideNames;
+	public string[] SideNames = new string[6]{"Eggs","Bacon","Pancakes","Donuts","Onions","Fries"};
 	public GameObject[] Sides_obj;
 	public int current_index = -1;
 	int nextLevel = 0;
 	// Use this for initialization
 	void Start () {
 		DontDestroyOnLoad (this.gameObject);
-		SideNames = new string[6]{"Eggs","Bacon","Pancakes","Donuts","Onions","Fries"};
+		//SideNames = new string[6]{"Eggs","Bacon","Pancakes","Donuts","Onions","Fries"};
 	}
 
 	public void SetNextSide(int index){
