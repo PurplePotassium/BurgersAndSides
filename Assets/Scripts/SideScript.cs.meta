@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: d54d727c8e4a31e448022b73cfb700a9
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - bg_img: {fileID: 2800000, guid: 8884dea3b0868dd4f80eb02a3803220b, type: 3}
+  - nextlevel_b: {fileID: 2800000, guid: 0e22222592495e445bddb32107c5f5ae, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
