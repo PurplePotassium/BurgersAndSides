@@ -5,9 +5,6 @@ using System.Collections.Generic;
 public class SideScript : MonoBehaviour {
 	GameObject Manager;
 	MainScript game_script;
-
-	float tamx = 0f;
-	float tamy = 0f;
 	float posx = 0f ;
 	float  posy = 0f;
 	public Texture2D bg_img;
@@ -31,9 +28,9 @@ public class SideScript : MonoBehaviour {
 			while(lastNumbers.Contains(randomNumber)){
 				randomNumber = Random.Range(0,5);
 			}
-			lastNumbers.Add(randomNumber);
-			SideButtons[i] = SidesToChoose[randomNumber];
-				}
+			    lastNumbers.Add(randomNumber);
+			    SideButtons[i] = SidesToChoose[randomNumber];
+			}
 		
 	}
 
