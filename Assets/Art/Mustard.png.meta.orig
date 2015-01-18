@@ -1,12 +1,11 @@
 fileFormatVersion: 2
-guid: daed2fab9dc8e9d4c83aeb786c2ba155
+<<<<<<< HEAD
+guid: 062fc214740e4584d8169337c1fc30b4
+=======
+guid: fe0f7d6d5fc6e30478b838d4c78c3b89
+>>>>>>> vwing
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: CHOOSE A SIDE_0
-    21300002: CHOOSE A SIDE_1
-    21300004: CHOOSE A SIDE_2
-    21300006: CHOOSE A SIDE_3
-    21300008: CHOOSE A SIDE_4
+  fileIDToRecycleName: {}
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,9 +29,9 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: 16
+    aniso: -1
     mipBias: -1
-    wrapMode: 1
+    wrapMode: -1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
