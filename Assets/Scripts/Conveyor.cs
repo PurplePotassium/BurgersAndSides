@@ -23,13 +23,14 @@ public class Conveyor : MonoBehaviour
 
 	// Use this for initialization
 	void Start () {
-        StartCoroutine(ConveyorBelt());
+        StartCoroutine("ConveyorBelt");
 	}
 	
 	// Update is called once per frame
     void Update()
     {
         for (int i = 0; i < burgerArray.Count; ++i)
+        {
             if (burgerArray[i] != null)
             {
                 burgerArray[i].transform.position = Vector3.Lerp(burgerArray[i].transform.position, conveyorEndPoint,
@@ -39,8 +40,10 @@ public class Conveyor : MonoBehaviour
             {
                 GetComponent<Spawn>().SpawnOne();
             }
+            //if (burgerArray[i].transform.position == conveyorEndPoint)
+            //    Destroy(burgerArray[i].gameObject);
+        }
         burgerArray = TruncateList(burgerArray);
-	
 	}
 
     List<GameObject> TruncateList(List<GameObject> list1)
@@ -54,9 +57,14 @@ public class Conveyor : MonoBehaviour
         return list2;
     }
 
+    public void StopConveyor()
+    {
+        StopCoroutine("ConveyorBelt");
+    }
+
     IEnumerator ConveyorBelt()
     {
-        for(int i = 0; i<10; ++i)
+        while(true)
         {
             GameObject temp = Instantiate(burger,conveyorSpawnPoint,burger.transform.rotation) as GameObject;
             temp.GetComponent<NewBurger>().conveyor = true;

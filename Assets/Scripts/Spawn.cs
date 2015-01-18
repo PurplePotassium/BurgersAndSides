@@ -53,6 +53,8 @@ public class Spawn : MonoBehaviour {
             Instantiate(burger, spawnPoints[ran], burger.transform.rotation);
         else if(indexTaken.IsProperSubsetOf(full))
             SpawnOne();
+        else
+            GetComponent<Conveyor>().StopConveyor();
         indexTaken.Add(ran);
     }
 }
