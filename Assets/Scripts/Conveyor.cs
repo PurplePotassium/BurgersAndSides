@@ -16,8 +16,8 @@ public class Conveyor : MonoBehaviour
     void Awake()
     {
         manager = GameObject.Find("GUI");
-        conveyorSpawnPoint = new Vector3(-8.54f, 4.2f, -0.44f);
-        conveyorEndPoint = new Vector3(14f, 4.2f, -0.44f);
+        conveyorSpawnPoint = new Vector3(-18f, 4.2f, -0.44f);
+        conveyorEndPoint = new Vector3(16f, 4.2f, -0.44f);
         conveyorDistance = Vector3.Distance(conveyorSpawnPoint, conveyorEndPoint);
     }
 
