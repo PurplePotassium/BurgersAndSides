@@ -15,6 +15,7 @@ public class NewBurger : MonoBehaviour {
 	public int BurgerPenalty = 7;
 	public Vector3 FirstColor;
 	public Vector3 SecondColor;
+	public bool isBurger = false;
 
 	void Start () {
 		Manager = GameObject.Find ("Manager");
@@ -22,8 +23,10 @@ public class NewBurger : MonoBehaviour {
 		SpriteColor = new SpriteRenderer[2];
 		CookLevel.y = 0f;
 		CookLevel.x = 0f;
-		//GetComponent<SpriteRenderer> ().color = Color.red;
-		//other.GetComponent<SpriteRenderer> ().color = Color.red;
+		if (isBurger) {
+						GetComponent<SpriteRenderer> ().color = Color.red;
+						other.GetComponent<SpriteRenderer> ().color = Color.red;
+				}
 		SpriteColor [0] = GetComponent<SpriteRenderer> ();
 		SpriteColor [1] = other.GetComponent<SpriteRenderer> ();
 		current_timer = color_change;
