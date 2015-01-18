@@ -2,27 +2,49 @@
 using System.Collections;
 
 public class BurgerBar : MonoBehaviour {
-	public int maxHealth = 100;
-	public int curHealth = 100;
+	public float maxHealth = 100f;
+	public float curHealth = 100f;
 	private float healthBarLength;
-
+	public Texture2D bgHP; 	
+	public Texture2D fgHP;
+	float playerHP = 1.0f;
 	// Use this for initialization
 	void Start () 
 	{
-		healthBarLength = Screen.width / 2;
+
 	
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		AdjustcurHealth (0);
-	}
-	void OnGUI()
-	{
-		GUI.Box(new Rect(10,10, healthBarLength, 20), curHealth + "/" + maxHealth);
 
 	}
+
+	void OnGUI()
+	{
+		Draw_Bar ();
+	}
+
+	void Draw_Bar(){
+				playerHP = (curHealth / maxHealth);
+	
+				GUI.BeginGroup (new Rect (0, 0, 180, 33));			
+	
+				GUI.Box (new Rect (-10, 0, 180, 33), bgHP);			
+	
+				GUI.BeginGroup (new Rect (-10, 0, playerHP * 180, 33));			
+	
+				GUI.Box (new Rect (0, 0, 180, 33), fgHP);
+	
+	
+				GUI.EndGroup ();
+				GUI.EndGroup ();
+
+				GUI.contentColor = Color.black;
+				GUI.Label(new Rect(50,7, 70, 20), curHealth + "/" + maxHealth);
+		}
+
 	public void AdjustcurHealth(int adj)
 	{
 		curHealth += adj;
@@ -32,7 +54,6 @@ public class BurgerBar : MonoBehaviour {
 				curHealth = maxHealth;
 			if (maxHealth < 1)
 				maxHealth = 1;
-		healthBarLength = (Screen.width / 2) *(curHealth /(float) maxHealth);
 	}
 
 }
