@@ -16,6 +16,7 @@ public class NewBurger : MonoBehaviour {
 	public Vector3 FirstColor;
 	public Vector3 SecondColor;
 	public bool isBurger = false;
+    public bool conveyor = false;
 
 	void Start () {
 		Manager = GameObject.Find ("GUI");
@@ -83,7 +84,7 @@ public class NewBurger : MonoBehaviour {
 
 	void FixedUpdate(){
 		current_timer -= Time.deltaTime;
-		if (current_timer <= 0 && !isBurned) {
+		if (current_timer <= 0 && !isBurned && !conveyor) {
 
 			ChangeColor ();
 			cook_level += 0.15f;							
@@ -101,5 +102,7 @@ public class NewBurger : MonoBehaviour {
 	void OnMouseDown(){		
 		if(!isBurned)
 			Flip ();
+        if(conveyor)
+            Destroy(this.gameObject);
 	}
 }
