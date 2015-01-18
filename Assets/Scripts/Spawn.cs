@@ -22,7 +22,7 @@ public class Spawn : MonoBehaviour {
         spawnPoints.Add(new Vector3(3.99f, 0.49f, -0.44f));
         spawnPoints.Add(new Vector3(7f, -1.68f, -0.44f));
 
-        StartCoroutine(Spawner());
+        //StartCoroutine(Spawner());
 	}
 	
 	// Update is called once per frame
@@ -40,5 +40,13 @@ public class Spawn : MonoBehaviour {
             indexTaken.Add(ran);
             yield return new WaitForSeconds(1f);
         }
+    }
+
+    public void SpawnOne()
+    {
+        int ran = Random.Range(0, 7);
+        if (!indexTaken.Contains(ran))
+            Instantiate(burger, spawnPoints[ran], burger.transform.rotation);
+        indexTaken.Add(ran);
     }
 }

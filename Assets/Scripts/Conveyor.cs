@@ -4,6 +4,8 @@ using System.Collections.Generic;
 
 public class Conveyor : MonoBehaviour
 {
+    GameObject manager;
+
     public GameObject burger;
     public float conveyorSpeed = 1.0f;
     Vector3 conveyorSpawnPoint;
@@ -13,24 +15,30 @@ public class Conveyor : MonoBehaviour
 
     void Awake()
     {
+        manager = GameObject.Find("GUI");
         conveyorSpawnPoint = new Vector3(-8.54f, 4.2f, -0.44f);
-        conveyorEndPoint = new Vector3(11.55f, 4.2f, -0.44f);
+        conveyorEndPoint = new Vector3(14f, 4.2f, -0.44f);
         conveyorDistance = Vector3.Distance(conveyorSpawnPoint, conveyorEndPoint);
     }
 
 	// Use this for initialization
 	void Start () {
         StartCoroutine(ConveyorBelt());
-        
 	}
 	
 	// Update is called once per frame
     void Update()
     {
         for (int i = 0; i < burgerArray.Count; ++i)
-            burgerArray[i].transform.position = Vector3.Lerp(conveyorSpawnPoint, conveyorEndPoint, (conveyorSpeed * Time.deltaTime) / conveyorDistance);
-        //Instantiate(burger);
-        //burger.transform.position = Vector3.Lerp(conveyorSpawnPoint, conveyorEndPoint, (conveyorSpeed * Time.deltaTime)/conveyorDistance);
+            if(burgerArray[i]!=null)
+            {
+                burgerArray[i].transform.position = Vector3.Lerp(burgerArray[i].transform.position, conveyorEndPoint,
+                    conveyorSpeed * Time.deltaTime);
+            }
+            else
+            {
+                GetComponent<Spawn>().SpawnOne();
+            }
 	
 	}
 
@@ -38,9 +46,10 @@ public class Conveyor : MonoBehaviour
     {
         for(int i = 0; i<10; ++i)
         {
-            burgerArray.Add(Instantiate(burger,conveyorSpawnPoint,burger.transform.rotation) as GameObject);
-            //burgerArray[i].transform.position = Vector3.Lerp(conveyorSpawnPoint, conveyorEndPoint, (conveyorSpeed * Time.deltaTime) / conveyorDistance);
-            yield return new WaitForSeconds(1f);
+            GameObject temp = Instantiate(burger,conveyorSpawnPoint,burger.transform.rotation) as GameObject;
+            temp.GetComponent<NewBurger>().conveyor = true;
+            burgerArray.Add(temp);
+            yield return new WaitForSeconds(3f);
         }
     }
 }
