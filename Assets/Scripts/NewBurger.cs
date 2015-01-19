@@ -20,8 +20,9 @@ public class NewBurger : MonoBehaviour
     public bool isBurger = false;
     public bool conveyorStart = false;
     public bool conveyorEnd = false;
+    public bool clicked = false;
 
-    bool cooking = true;
+    public bool cooking = true;
     Vector3 conveyorSpawnPoint = new Vector3(-2f, 4.2f, -0.44f);
 
     void Start()
@@ -42,16 +43,20 @@ public class NewBurger : MonoBehaviour
         current_timer = color_change;
     }
 
+    void FlipAnim()
+    {
+        this.GetComponent<Animator>().SetTrigger("Flip");
+        other.GetComponent<Animator>().SetTrigger("Flip");
+    }
 
     void Flip()
     {
-        //Debug.Log(this.animation)
-        //Invoke ("TurnAnimOFF", 5f);
-        //GetComponent<Animator>().enabled = true;
-
-        //GetComponent<Animator> ().SetBool ("Flip", true);
-        //this.animation.Play();
-
+        if (!conveyorStart)
+        {
+            GetComponent<SpriteRenderer>().color = other.GetComponent<SpriteRenderer>().color;
+            other.GetComponent<SpriteRenderer>().color = GetComponent<SpriteRenderer>().color;
+            FlipAnim();
+        }
         if (state == CurrentSide.One)
         {
             state = CurrentSide.Two;
@@ -64,8 +69,6 @@ public class NewBurger : MonoBehaviour
             CookLevel.y = cook_level;
             cook_level = CookLevel.x;
         }
-        GetComponent<SpriteRenderer>().color = other.GetComponent<SpriteRenderer>().color;
-        other.GetComponent<SpriteRenderer>().color = GetComponent<SpriteRenderer>().color;
 
     }
 
@@ -131,6 +134,6 @@ public class NewBurger : MonoBehaviour
         if (!isBurned)
             Flip();
         if (conveyorStart)
-            Destroy(this.gameObject);
+            clicked = true;
     }
 }

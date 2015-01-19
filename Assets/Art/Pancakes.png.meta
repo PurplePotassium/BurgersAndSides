@@ -1,13 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: bd988d5ed38e12940b6d79e95fe6c7ed
-=======
-<<<<<<< HEAD
-guid: 370578aa643001c428d331d811c6be71
-=======
-guid: bd988d5ed38e12940b6d79e95fe6c7ed
->>>>>>> 978018390d01160dc800f01c59fe3af42cb45031
->>>>>>> gfazenda
 TextureImporter:
   fileIDToRecycleName:
     21300000: Pancakes_0
@@ -41,15 +33,7 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-<<<<<<< HEAD
-    aniso: -1
-=======
-<<<<<<< HEAD
     aniso: 16
-=======
-    aniso: -1
->>>>>>> 978018390d01160dc800f01c59fe3af42cb45031
->>>>>>> gfazenda
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -70,80 +54,80 @@ TextureImporter:
     - name: Pancakes_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1024
-        width: 1024
-        height: 1024
+        x: 82
+        y: 1270
+        width: 840
+        height: 504
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Pancakes_1
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 1024
-        width: 1024
-        height: 1024
+        x: 1162
+        y: 1206
+        width: 792
+        height: 580
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Pancakes_2
       rect:
         serializedVersion: 2
-        x: 2048
-        y: 1024
-        width: 1024
-        height: 1024
+        x: 2314
+        y: 1120
+        width: 520
+        height: 734
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Pancakes_3
       rect:
         serializedVersion: 2
-        x: 3072
-        y: 1024
-        width: 1024
-        height: 1024
+        x: 3530
+        y: 1134
+        width: 108
+        height: 792
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Pancakes_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1024
-        height: 1024
+        x: 82
+        y: 246
+        width: 840
+        height: 504
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Pancakes_5
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 0
-        width: 1024
-        height: 1024
+        x: 1162
+        y: 182
+        width: 792
+        height: 580
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Pancakes_6
       rect:
         serializedVersion: 2
-        x: 2048
-        y: 0
-        width: 1024
-        height: 1024
+        x: 2314
+        y: 96
+        width: 520
+        height: 734
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Pancakes_7
       rect:
         serializedVersion: 2
-        x: 3072
-        y: 0
-        width: 1024
-        height: 1024
+        x: 3530
+        y: 110
+        width: 108
+        height: 792
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
