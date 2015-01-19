@@ -29,6 +29,10 @@ public class NewBurger : MonoBehaviour
     public GameObject burnMessage;
     public GameObject rawMessage;
 
+	public GameObject smokeObject;
+
+	GameObject smoke;
+
 	bool temporarilyswitch;
 
     void Start()
@@ -104,6 +108,7 @@ public class NewBurger : MonoBehaviour
 		GameObject temp = Instantiate(burnMessage, new Vector3(0f, 2.08f, -0.88f), perfectMessage.transform.rotation) as GameObject;
 		temp.transform.position = new Vector3(transform.position.x,transform.position.y,-5);
         Destroy(this.gameObject, 2f);
+		shake = 1;
     }
 
     void DeliverBurguer()
@@ -133,8 +138,13 @@ public class NewBurger : MonoBehaviour
 		transform.position = new Vector3(transform.position.x, conveyorSpawnPoint.y, transform.position.z);
     }
 
+	float shake = 0;
     void FixedUpdate()
     {
+		if(isBurned){
+			shake *= .95f;
+			Camera.main.transform.position = new Vector3((Random.value-.5f)*shake,(Random.value-.5f)*shake,-10);
+		}
 		if(transform.position.x > 15f){
 			Manager.GetComponent<BurgerBar>().curHealth -= BurgerPenalty/2;
 			Destroy (this.gameObject);
@@ -151,11 +161,16 @@ public class NewBurger : MonoBehaviour
                 cook_level += 0.15f*Time.deltaTime;
                 current_timer = color_change;
                 if (cook_level >= max_cook) Burned();
+				else if(CookLevel.x >= 1f && CookLevel.y >= 1f && smoke == null){
+					smoke = (GameObject)Instantiate(smokeObject);
+					smoke.transform.parent = this.transform;
+					smoke.transform.localPosition = new Vector3(0,5f,.1f);
+				}
             }
-        }
-    }
-
-    void OnMouseOver()
+		}
+	}
+	
+	void OnMouseOver()
     {
         if (Input.GetMouseButtonDown(1) && !isBurned){
             DeliverBurguer();

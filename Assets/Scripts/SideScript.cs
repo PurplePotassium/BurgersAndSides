@@ -28,8 +28,11 @@ public class SideScript : MonoBehaviour {
 		int randomNumber;
 		for (int i=0; i<3; i++) {
 			randomNumber = Random.Range(0,5);
+			int asdf = 0;
 			while(StaticScript.AvailableSides[randomNumber]){//lastNumbers.Contains(randomNumber)){
 				randomNumber = Random.Range(0,5);
+				if(++asdf == 100)
+					break;
 			}
 			lastNumbers.Add(randomNumber);
 			SideButtons[i] = SidesToChoose[randomNumber];
