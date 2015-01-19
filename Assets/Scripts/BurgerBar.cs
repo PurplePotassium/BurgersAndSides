@@ -7,18 +7,22 @@ public class BurgerBar : MonoBehaviour {
 	private float healthBarLength;
 	public Texture2D bgHP; 	
 	public Texture2D fgHP;
+	public GUIStyle style;
 	float playerHP = 1.0f;
 	// Use this for initialization
 	void Start () 
 	{
-
-	
+		style = new GUIStyle();
+		style.fontSize = 48;
+		style.fontStyle = FontStyle.Bold;
+		style.alignment = TextAnchor.MiddleCenter;
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-
+		if(curHealth <= 0)
+			Application.LoadLevel("Start Menu");
 	}
 
 	void OnGUI()
@@ -27,22 +31,19 @@ public class BurgerBar : MonoBehaviour {
 	}
 
 	void Draw_Bar(){
+		float SIZEX = Screen.width*.5f;
+		float SIZEY = SIZEX/180*33;
+		float POSY = Screen.height-SIZEY-5;
 				playerHP = (curHealth / maxHealth);
+		
+		/*GUI.Box (new Rect (0, 0, SIZEX, SIZEY), bgHP);			
+		GUI.Box (new Rect (10, 0, SIZEX, SIZEY), fgHP);*/
+		GUI.Label(new Rect (0, POSY, SIZEX, SIZEY), bgHP);			
+		GUI.Label(new Rect (0, POSY, SIZEX*playerHP, SIZEY), fgHP);
 	
-				GUI.BeginGroup (new Rect (0, 0, 180, 33));			
-	
-				GUI.Box (new Rect (-10, 0, 180, 33), bgHP);			
-	
-				GUI.BeginGroup (new Rect (-10, 0, playerHP * 180, 33));			
-	
-				GUI.Box (new Rect (0, 0, 180, 33), fgHP);
-	
-	
-				GUI.EndGroup ();
-				GUI.EndGroup ();
 
-				GUI.contentColor = Color.black;
-				GUI.Label(new Rect(50,7, 70, 20), curHealth + "/" + maxHealth);
+				//GUI.contentColor = Color.white;
+				GUI.Label(new Rect(0,POSY+7-SIZEY/4, SIZEX, SIZEY), (int)(playerHP*maxHealth) + "/" + (int)(maxHealth),style);
 		}
 
 	public void AdjustcurHealth(int adj)

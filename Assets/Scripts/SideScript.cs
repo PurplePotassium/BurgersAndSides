@@ -28,12 +28,12 @@ public class SideScript : MonoBehaviour {
 		int randomNumber;
 		for (int i=0; i<3; i++) {
 			randomNumber = Random.Range(0,5);
-			while(lastNumbers.Contains(randomNumber)){
+			while(StaticScript.AvailableSides[randomNumber]){//lastNumbers.Contains(randomNumber)){
 				randomNumber = Random.Range(0,5);
 			}
 			lastNumbers.Add(randomNumber);
 			SideButtons[i] = SidesToChoose[randomNumber];
-				}
+		}
 		
 	}
 
@@ -47,6 +47,7 @@ public class SideScript : MonoBehaviour {
 						if (GUI.Button (new Rect (posx, posy, b_width, b_height), SideButtons [0])) {
 								sideChosen = true;
 								game_script.SetNextSide (lastNumbers [0]);
+				StaticScript.AvailableSides[lastNumbers[0]] = true;
 						}
 			
 
@@ -55,7 +56,8 @@ public class SideScript : MonoBehaviour {
 			            game_script.getSideName(lastNumbers [1]));
 						if (GUI.Button (new Rect (posx, posy, b_width, b_height), SideButtons [1])) {
 								sideChosen = true;
-								game_script.SetNextSide (lastNumbers [1]);
+				game_script.SetNextSide (lastNumbers [1]);
+				StaticScript.AvailableSides[lastNumbers[1]] = true;
 						}
 
 						posx += newline;
@@ -63,13 +65,15 @@ public class SideScript : MonoBehaviour {
 			            game_script.getSideName(lastNumbers [2]));
 						if (GUI.Button (new Rect (posx, posy, b_width, b_height), SideButtons [2])) {
 								sideChosen = true;
-								game_script.SetNextSide (lastNumbers [2]);
+				game_script.SetNextSide (lastNumbers [2]);
+				StaticScript.AvailableSides[lastNumbers[2]] = true;
 						}
 
 
 				} else {
 						if (GUI.Button (new Rect (posx, posy, 200, 70), nextlevel_b)) {
-								Application.LoadLevel (game_script.getLevel ());
+				StaticScript.ActualNextLevel();
+								//Application.LoadLevel (game_script.getLevel ());
 						}
 				}
 		}

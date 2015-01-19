@@ -10,7 +10,7 @@ public class Button : MonoBehaviour {
 
 	public void startLevel(){
 		//same as the first one
-		Application.LoadLevel(0);
+		Application.LoadLevel("maingame3");
 	}
 	public void exitGame(){
 		Application.Quit();

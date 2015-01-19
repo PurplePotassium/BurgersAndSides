@@ -13,11 +13,18 @@ public class MainScript : MonoBehaviour {
 
 	public void SetNextSide(int index){
 		current_index = index;
+		StaticScript.AvailableSides[index] = true;
 		}
 
 	public GameObject getSide(){
-		return Sides_obj[current_index];
-		}
+		ArrayList available = new ArrayList();
+		for(int i = 0; i < Sides_obj.Length; i++)
+			if(StaticScript.AvailableSides[i])
+				available.Add(i);
+		if(available.Count == 0)
+			return null;
+		return Sides_obj[(int)available[Random.Range(0,available.Count-1)]];
+	}
 	public int getLevel(){
 				return nextLevel;
 		}

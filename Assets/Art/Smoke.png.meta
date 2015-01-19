@@ -64,7 +64,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 1024
-        width: 512
+        width: 1024
         height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -72,9 +72,9 @@ TextureImporter:
     - name: Smoke_1
       rect:
         serializedVersion: 2
-        x: 512
+        x: 1024
         y: 1024
-        width: 512
+        width: 1024
         height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -82,9 +82,9 @@ TextureImporter:
     - name: Smoke_2
       rect:
         serializedVersion: 2
-        x: 1024
+        x: 2048
         y: 1024
-        width: 512
+        width: 1024
         height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -92,9 +92,9 @@ TextureImporter:
     - name: Smoke_3
       rect:
         serializedVersion: 2
-        x: 1536
+        x: 3072
         y: 1024
-        width: 512
+        width: 1024
         height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -102,9 +102,9 @@ TextureImporter:
     - name: Smoke_4
       rect:
         serializedVersion: 2
-        x: 2048
-        y: 1024
-        width: 512
+        x: 0
+        y: 0
+        width: 1024
         height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -112,9 +112,9 @@ TextureImporter:
     - name: Smoke_5
       rect:
         serializedVersion: 2
-        x: 2560
-        y: 1024
-        width: 512
+        x: 1024
+        y: 0
+        width: 1024
         height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -122,9 +122,9 @@ TextureImporter:
     - name: Smoke_6
       rect:
         serializedVersion: 2
-        x: 3072
-        y: 1024
-        width: 512
+        x: 2048
+        y: 0
+        width: 1024
         height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -132,89 +132,9 @@ TextureImporter:
     - name: Smoke_7
       rect:
         serializedVersion: 2
-        x: 3584
-        y: 1024
-        width: 512
-        height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Smoke_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 512
-        height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Smoke_9
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 0
-        width: 512
-        height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Smoke_10
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 0
-        width: 512
-        height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Smoke_11
-      rect:
-        serializedVersion: 2
-        x: 1536
-        y: 0
-        width: 512
-        height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Smoke_12
-      rect:
-        serializedVersion: 2
-        x: 2048
-        y: 0
-        width: 512
-        height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Smoke_13
-      rect:
-        serializedVersion: 2
-        x: 2560
-        y: 0
-        width: 512
-        height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Smoke_14
-      rect:
-        serializedVersion: 2
         x: 3072
         y: 0
-        width: 512
-        height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Smoke_15
-      rect:
-        serializedVersion: 2
-        x: 3584
-        y: 0
-        width: 512
+        width: 1024
         height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}

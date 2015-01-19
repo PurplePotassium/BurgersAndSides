@@ -1,8 +1,8 @@
 fileFormatVersion: 2
-guid: 1ebe5c9da4d46a44985f2932df66c189
+guid: c07bd7cd4f11c3d45886e3f4358d5647
 TextureImporter:
   fileIDToRecycleName:
-    21300000: OnionRings_9
+    21300000: OnionRings_0
     21300002: OnionRings_1
     21300004: OnionRings_2
     21300006: OnionRings_3
@@ -10,8 +10,6 @@ TextureImporter:
     21300010: OnionRings_5
     21300012: OnionRings_6
     21300014: OnionRings_7
-    21300016: OnionRings_0
-    21300018: OnionRings_4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -53,105 +51,85 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: OnionRings_9
+    - name: OnionRings_0
       rect:
         serializedVersion: 2
-        x: 773
-        y: 1421
-        width: 40
-        height: 20
+        x: 0
+        y: 1024
+        width: 1024
+        height: 1024
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: OnionRings_1
       rect:
         serializedVersion: 2
-        x: 1346
-        y: 1314
-        width: 392
-        height: 416
+        x: 1024
+        y: 1024
+        width: 1024
+        height: 1024
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: OnionRings_2
       rect:
         serializedVersion: 2
-        x: 2386
-        y: 1290
-        width: 356
-        height: 464
+        x: 2048
+        y: 1024
+        width: 1024
+        height: 1024
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: OnionRings_3
       rect:
         serializedVersion: 2
-        x: 3442
-        y: 1266
-        width: 216
-        height: 552
+        x: 3072
+        y: 1024
+        width: 1024
+        height: 1024
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: OnionRings_4
       rect:
         serializedVersion: 2
-        x: 670
-        y: 346
-        width: 40
-        height: 20
+        x: 0
+        y: 0
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: OnionRings_5
       rect:
         serializedVersion: 2
-        x: 1346
-        y: 290
-        width: 392
-        height: 416
+        x: 1024
+        y: 0
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: OnionRings_6
       rect:
         serializedVersion: 2
-        x: 2386
-        y: 266
-        width: 356
-        height: 464
+        x: 2048
+        y: 0
+        width: 1024
+        height: 1024
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: OnionRings_7
       rect:
         serializedVersion: 2
-        x: 3442
-        y: 242
-        width: 216
-        height: 552
+        x: 3072
+        y: 0
+        width: 1024
+        height: 1024
       alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: OnionRings_0
-      rect:
-        serializedVersion: 2
-        x: 249
-        y: 1330
-        width: 498
-        height: 393
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: OnionRings_4
-      rect:
-        serializedVersion: 2
-        x: 258
-        y: 316
-        width: 489
-        height: 367
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
