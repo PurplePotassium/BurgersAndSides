@@ -12,7 +12,7 @@ public class Conveyor : MonoBehaviour
     Vector3 conveyorSpawnPoint;
     Vector3 conveyorEndPoint;
     float conveyorDistance;
-    List<GameObject> burgerArray = new List<GameObject>();
+    public List<GameObject> burgerArray = new List<GameObject>();
 
 	private float sideOrBurgerProbability; // stores random number to determine whether a burger or side is spawned
 
@@ -72,6 +72,7 @@ public class Conveyor : MonoBehaviour
     {
         while(true)
         {
+<<<<<<< Updated upstream
 			GameObject temp = null;
 			sideOrBurgerProbability = Random.value;
 			Debug.Log (sideOrBurgerProbability);
@@ -84,6 +85,10 @@ public class Conveyor : MonoBehaviour
 				temp = Instantiate(lvlManager.GetComponent<MainScript>().getSide(), conveyorSpawnPoint, burger.transform.rotation) as GameObject;
 			}
             temp.GetComponent<NewBurger>().conveyor = true;
+=======
+            GameObject temp = Instantiate(burger,conveyorSpawnPoint,burger.transform.rotation) as GameObject;
+            temp.GetComponent<NewBurger>().conveyorStart = true;
+>>>>>>> Stashed changes
             burgerArray.Add(temp);
             yield return new WaitForSeconds(3f);
         }

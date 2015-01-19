@@ -9,6 +9,8 @@ public class Spawn : MonoBehaviour {
     HashSet<int> full = new HashSet<int>();
     public GameObject burger;
 
+    int spawnPoint = 0;
+
     void Awake()
     {
     }
@@ -38,23 +40,31 @@ public class Spawn : MonoBehaviour {
     {
         while (true)
         {
-            int ran = Random.Range(0, 7);
-            if(!indexTaken.Contains(ran))
-                Instantiate(burger, spawnPoints[ran], burger.transform.rotation);
-            indexTaken.Add(ran);
+            if (spawnPoint >= spawnPoints.Count)
+                spawnPoint = 0;
+            Instantiate(burger, spawnPoints[spawnPoint++], burger.transform.rotation);
+
+            //int ran = Random.Range(0, 7);
+            //if(!indexTaken.Contains(ran))
+            //    Instantiate(burger, spawnPoints[ran], burger.transform.rotation);
+            //indexTaken.Add(ran);
             yield return new WaitForSeconds(1f);
         }
     }
 
     public void SpawnOne()
     {
-        int ran = Random.Range(0, 7);
-        if (!indexTaken.Contains(ran))
-            Instantiate(burger, spawnPoints[ran], burger.transform.rotation);
-        else if(indexTaken.IsProperSubsetOf(full))
-            SpawnOne();
-        else
-            GetComponent<Conveyor>().StopConveyor();
-        indexTaken.Add(ran);
+        if (spawnPoint >= spawnPoints.Count)
+            spawnPoint = 0;
+        Instantiate(burger, spawnPoints[spawnPoint++], burger.transform.rotation);
+
+        //int ran = Random.Range(0, 7);
+        //if (!indexTaken.Contains(ran))
+        //    Instantiate(burger, spawnPoints[ran], burger.transform.rotation);
+        //else if(indexTaken.IsProperSubsetOf(full))
+        //    SpawnOne();
+        //else
+        //    GetComponent<Conveyor>().StopConveyor();
+        //indexTaken.Add(ran);
     }
 }

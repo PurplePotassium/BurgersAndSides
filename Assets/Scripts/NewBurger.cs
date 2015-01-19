@@ -12,14 +12,20 @@ public class NewBurger : MonoBehaviour {
 	float cook_level = 0f;
 	bool isBurned = false;
 	GameObject Manager;
+    GameObject Spawner;
 	public int BurgerPenalty = 7;
 	public Vector3 FirstColor;
 	public Vector3 SecondColor;
 	public bool isBurger = false;
-    public bool conveyor = false;
+    public bool conveyorStart = false;
+    public bool conveyorEnd = false;
+
+    bool cooking = true;
+    Vector3 conveyorSpawnPoint = new Vector3(-2f, 4.2f, -0.44f);
 
 	void Start () {
 		Manager = GameObject.Find ("GUI");
+        Spawner = GameObject.Find("Spawner");
 		state = CurrentSide.One;
 		SpriteColor = new SpriteRenderer[2];
 		CookLevel.y = 0f;
@@ -73,25 +79,34 @@ public class NewBurger : MonoBehaviour {
 	}
 	
 	void DeliverBurguer(){
-		Destroy (this.gameObject);
-		if (state == CurrentSide.One) 
+        cooking = false;
+        conveyorSpawnPoint.x = transform.position.x;
+        transform.position = new Vector3(transform.position.x,conveyorSpawnPoint.y,transform.position.z);
+        Spawner.GetComponent<Conveyor>().burgerArray.Add(this.gameObject);
+		Destroy (this.gameObject,10f);
+		if (state == CurrentSide.One)
 			CookLevel.x = cook_level;
 		else
 			CookLevel.y = cook_level;
-		if (!isBurned && CookLevel.x >= 1f && CookLevel.y >= 1f)
-			Debug.Log ("Perfect!");
+        if (!isBurned && CookLevel.x >= 1f && CookLevel.y >= 1f)
+            Debug.Log("Perfect!");
+        else if (!isBurned)
+            Debug.Log("Too raw :(");
 	}
-
+    
 	void FixedUpdate(){
-		current_timer -= Time.deltaTime;
-		if (current_timer <= 0 && !isBurned && !conveyor) {
+        if (cooking)
+        {
+            current_timer -= Time.deltaTime;
+            if (current_timer <= 0 && !isBurned && !conveyorStart)
+            {
 
-			ChangeColor ();
-			cook_level += 0.15f;							
-			current_timer = color_change;
-			if ( cook_level >= max_cook) Burned();
-		}
-		
+                ChangeColor();
+                cook_level += 0.15f;
+                current_timer = color_change;
+                if (cook_level >= max_cook) Burned();
+            }
+        }
 	}
 	
 	void OnMouseOver(){
@@ -99,10 +114,10 @@ public class NewBurger : MonoBehaviour {
 			DeliverBurguer ();
 	}
 	
-	void OnMouseDown(){		
+	void OnMouseDown(){
 		if(!isBurned)
 			Flip ();
-        if(conveyor)
+        if(conveyorStart)
             Destroy(this.gameObject);
 	}
 }
