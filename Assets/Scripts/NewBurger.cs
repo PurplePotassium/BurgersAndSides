@@ -20,8 +20,9 @@ public class NewBurger : MonoBehaviour
     public bool isBurger = false;
     public bool conveyorStart = false;
     public bool conveyorEnd = false;
+    public bool clicked = false;
 
-    bool cooking = true;
+    public bool cooking = true;
     Vector3 conveyorSpawnPoint = new Vector3(-2f, 4.2f, -0.44f);
 
     void Start()
@@ -131,6 +132,6 @@ public class NewBurger : MonoBehaviour
         if (!isBurned)
             Flip();
         if (conveyorStart)
-            Destroy(this.gameObject);
+            clicked = true;
     }
 }
