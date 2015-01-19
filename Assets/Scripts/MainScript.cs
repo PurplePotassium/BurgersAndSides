@@ -13,15 +13,14 @@ public class MainScript : MonoBehaviour {
 
 	public void SetNextSide(int index){
 		current_index = index;
-	}
+		}
 
 	public GameObject getSide(){
 		return Sides_obj[current_index];
-	}
-	
-    public int getLevel(){
-		return nextLevel;
-	}
+		}
+	public int getLevel(){
+				return nextLevel;
+		}
 
 	public string getSideName(int index){
 		return SideNames[index];

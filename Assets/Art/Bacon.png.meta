@@ -1,0 +1,135 @@
+fileFormatVersion: 2
+guid: 7f02d59666def01418635796932631a8
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Bacon_0
+    21300002: Bacon_1
+    21300004: Bacon_2
+    21300006: Bacon_3
+    21300008: Bacon_4
+    21300010: Bacon_5
+    21300012: Bacon_6
+    21300014: Bacon_7
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Bacon_0
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 1222
+        width: 852
+        height: 644
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bacon_1
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 1226
+        width: 780
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bacon_2
+      rect:
+        serializedVersion: 2
+        x: 2322
+        y: 1226
+        width: 516
+        height: 808
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bacon_3
+      rect:
+        serializedVersion: 2
+        x: 3178
+        y: 1366
+        width: 784
+        height: 680
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bacon_4
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 198
+        width: 852
+        height: 644
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bacon_5
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 202
+        width: 780
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bacon_6
+      rect:
+        serializedVersion: 2
+        x: 2322
+        y: 202
+        width: 516
+        height: 808
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bacon_7
+      rect:
+        serializedVersion: 2
+        x: 3178
+        y: 342
+        width: 784
+        height: 680
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

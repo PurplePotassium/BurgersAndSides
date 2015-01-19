@@ -5,7 +5,10 @@ public class CursorChange : MonoBehaviour {
 	public Texture2D cursor_img;
 	CursorMode cursorMode = CursorMode.ForceSoftware;
 	Vector2 hotSpot = Vector2.zero;
-
+	
+	
+	
+	// Use this for initialization
 	void Start () {
 		hotSpot.y = 50;
 		hotSpot.x = 10;
