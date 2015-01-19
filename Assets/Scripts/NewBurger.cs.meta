@@ -2,7 +2,11 @@ fileFormatVersion: 2
 guid: 0f602f72b04dd4040be2d75f9f435839
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - other: {instanceID: 0}
+  - perfectMessage: {fileID: 100000, guid: b21e4cdbbed6036458585824ddeac979, type: 2}
+  - burnMessage: {fileID: 100000, guid: 80b4fd469afef4d459c9a372d3e6f484, type: 2}
+  - rawMessage: {fileID: 100000, guid: 82109fa32345cfa4a86867ff1b79be62, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

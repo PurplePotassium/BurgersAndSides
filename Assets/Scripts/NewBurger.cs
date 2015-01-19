@@ -25,6 +25,10 @@ public class NewBurger : MonoBehaviour
     public bool cooking = true;
     Vector3 conveyorSpawnPoint = new Vector3(-2f, 4.2f, -0.44f);
 
+    public GameObject perfectMessage;
+    public GameObject burnMessage;
+    public GameObject rawMessage;
+
     void Start()
     {
         Manager = GameObject.Find("GUI");
@@ -102,7 +106,10 @@ public class NewBurger : MonoBehaviour
         else
             CookLevel.y = cook_level;
         if (!isBurned && CookLevel.x >= 1f && CookLevel.y >= 1f)
-            Debug.Log("Perfect!");
+        {
+            GameObject temp = Instantiate(perfectMessage, new Vector3(0f, 2.08f, -0.88f), perfectMessage.transform.rotation) as GameObject;
+            Destroy(temp, 2f);
+        }
         else if (!isBurned)
             Debug.Log("Too raw :(");
     }

@@ -1,7 +1,21 @@
 fileFormatVersion: 2
 guid: f45778859f767d945aa26ef3a71226ba
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: PERFECT_0
+    21300002: PERFECT_1
+    21300004: PERFECT_2
+    21300006: PERFECT_3
+    21300008: PERFECT_4
+    21300010: PERFECT_5
+    21300012: PERFECT_6
+    21300014: PERFECT_7
+    21300016: PERFECT_8
+    21300018: PERFECT_9
+    21300020: PERFECT_10
+    21300022: PERFECT_11
+    21300024: PERFECT_12
+    21300026: PERFECT_13
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -25,13 +39,13 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -42,6 +56,146 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: PERFECT_0
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 2431
+        width: 271
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PERFECT_1
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 2233
+        width: 332
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PERFECT_2
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 2047
+        width: 394
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PERFECT_3
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 1861
+        width: 452
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PERFECT_4
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 1678
+        width: 510
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PERFECT_5
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 1487
+        width: 566
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PERFECT_6
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 1301
+        width: 625
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PERFECT_7
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 1124
+        width: 679
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PERFECT_8
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 940
+        width: 762
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PERFECT_9
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 754
+        width: 722
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PERFECT_10
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 571
+        width: 683
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PERFECT_11
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 385
+        width: 642
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PERFECT_12
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 200
+        width: 606
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PERFECT_13
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 14
+        width: 572
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
