@@ -2,7 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class Spawn : MonoBehaviour {
+public class Spawn : MonoBehaviour
+{
     List<Vector3> spawnPoints = new List<Vector3>();
     bool[] spawned = new bool[7];
     HashSet<int> indexTaken = new HashSet<int>();
@@ -15,8 +16,9 @@ public class Spawn : MonoBehaviour {
     {
     }
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         for (int i = 0; i < 7; i++)
             full.Add(i);
 
@@ -29,12 +31,13 @@ public class Spawn : MonoBehaviour {
         spawnPoints.Add(new Vector3(7f, -1.68f, -0.44f));
 
         //StartCoroutine(Spawner());
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	    
-	}
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 
     IEnumerator Spawner()
     {
