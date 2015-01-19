@@ -10,7 +10,7 @@ public class CursorChange : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		hotSpot.y = 50;
+		hotSpot.y = 10;
 		hotSpot.x = 10;
 		Cursor.SetCursor(cursor_img, hotSpot, cursorMode);
 	}
