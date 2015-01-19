@@ -6,12 +6,15 @@ public class Conveyor : MonoBehaviour
 {
     GameObject manager;
 
+	public GameObject lvlManager; // Stores the manager object in the level
     public GameObject burger;
     public float conveyorSpeed = 1.0f;
     Vector3 conveyorSpawnPoint;
     Vector3 conveyorEndPoint;
     float conveyorDistance;
     List<GameObject> burgerArray = new List<GameObject>();
+
+	private float sideOrBurgerProbability; // stores random number to determine whether a burger or side is spawned
 
     void Awake()
     {
@@ -35,7 +38,7 @@ public class Conveyor : MonoBehaviour
             {
                 Vector3 curPos = burgerArray[i].transform.position;
                 float currPos = curPos.x;
-                //float percentTraveled = Vector3.Distance(curPos,conveyorSpawnPoint);
+                //float percentTraveled = Vector3.Distance(curPos,convey-orSpawnPoint);
                 burgerArray[i].transform.position +=
                     new Vector3((conveyorEndPoint.x-conveyorSpawnPoint.x)* conveyorSpeed*Time.deltaTime, 0f, 0f);
             }
@@ -69,7 +72,17 @@ public class Conveyor : MonoBehaviour
     {
         while(true)
         {
-            GameObject temp = Instantiate(burger,conveyorSpawnPoint,burger.transform.rotation) as GameObject;
+			GameObject temp = null;
+			sideOrBurgerProbability = Random.value;
+			Debug.Log (sideOrBurgerProbability);
+			if (sideOrBurgerProbability > 0.2f) // Gives the chance of spawning a burger an 80% chance
+			{
+            	temp = Instantiate(burger, conveyorSpawnPoint, burger.transform.rotation) as GameObject;
+			}
+			else // Otherwise spawn a side
+			{
+				temp = Instantiate(lvlManager.GetComponent<MainScript>().getSide(), conveyorSpawnPoint, burger.transform.rotation) as GameObject;
+			}
             temp.GetComponent<NewBurger>().conveyor = true;
             burgerArray.Add(temp);
             yield return new WaitForSeconds(3f);
