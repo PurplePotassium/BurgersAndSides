@@ -34,9 +34,10 @@ public class Conveyor : MonoBehaviour
             if (burgerArray[i] != null)
             {
                 Vector3 curPos = burgerArray[i].transform.position;
+                float currPos = curPos.x;
                 //float percentTraveled = Vector3.Distance(curPos,conveyorSpawnPoint);
-                burgerArray[i].transform.position = 
-                    Vector3.Lerp(curPos, conveyorEndPoint, conveyorSpeed*Time.deltaTime);
+                burgerArray[i].transform.position +=
+                    new Vector3((conveyorEndPoint.x-conveyorSpawnPoint.x)* conveyorSpeed*Time.deltaTime, 0f, 0f);
             }
             else
             {
